@@ -1,0 +1,69 @@
+@import url(//fonts.googleapis.com/earlyaccess/myanmarsanspro.css);
+
+@font-face {
+    font-family: 'Mon';
+    src: local('mon'), url('../fonts/mon.ttf');
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Myanmar Sans Pro','Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5em;
+    font-size: 1rem;
+
+    .font-mon {
+        font-family: 'Mon';
+    }
+
+    .font-mm {
+        font-family: 'Myanmar Sans Pro', sans-serif;
+    }
+
+    .font-normal {
+        font-weight: 400;
+    }
+
+    .font-bold {
+        font-weight: 900;
+    }
+
+    .hover-link {
+        transition: 0.2s linear;
+
+        &:hover {
+            color: #efefef !important;
+            transition: 0.2s linear;
+        }
+    }
+
+    .sidebar-active {
+        color: #ffac41 !important;
+        background: #323232 !important;
+
+        &:hover {
+            color: #ffac41 !important;
+        }
+    }
+
+    .profileFile,
+    .productFile {
+        [type="file"] {
+            height: 0;
+            overflow: hidden;
+            width: 0;
+        }
+    }
+
+    .multiple-selected{
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 0;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 0;
+        }
+    }
+}

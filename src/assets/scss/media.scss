@@ -1,0 +1,86 @@
+@media screen and (min-width: 768px) {
+    .sidebar {
+        width: 240px;
+        transition: width 0.3s linear;
+
+        small {
+            transform: translate3d(0,0,0);
+            opacity: 1;
+            transition: 0.2s linear;
+        }
+
+        &.sidebarOpen {
+            width: 50px;
+            transition: width 0.3s linear;
+
+            li {
+                overflow: hidden;
+
+                small {
+                    transform: translate3d(50px,0,0);
+                    opacity: 0;
+                    transition: 0.2s linear;
+                }
+            }
+        }
+    }
+    .layout {
+        padding-left: 240px;
+        transition: padding-left 0.3s linear;
+
+        &.layoutOpen {
+            padding-left: 50px;
+            transition: padding-left 0.3s linear;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sidebar {
+        width: 50px;
+        transition: width 0.3s linear;
+
+        li {
+            overflow: hidden;
+
+            small {
+                transform: translate3d(10px,0,0);
+                opacity: 0;
+                transition: 0.1s linear;
+            }
+        }
+    }
+    .layout {
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .sidebar {
+        width: 0;
+        transition: width 0.3s linear;
+
+        small {
+            transform: translate3d(100px,0,0) !important;
+            transition: 0.2s linear;
+        }
+
+        &.sidebarOpen {
+            width: 100%;
+            transition: width 0.3s linear;
+
+            li {
+                overflow: inherit;
+
+                small {
+                    transform: translate3d(0,0,0) !important;
+                    opacity: 1;
+                    transition: 0.2s linear;
+                }
+            }
+        }
+    }
+    .layout {
+        padding-left: 0;
+    }
+}
